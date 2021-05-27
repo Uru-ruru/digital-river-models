@@ -1,7 +1,6 @@
 {
   "name": "uru/digital-river-models",
   "description": "Models for Digital River/ MyCommerce integrations",
-  "minimum-stability": "stable",
   "license": "MIT",
   "keywords": [
     "digitalriver",
