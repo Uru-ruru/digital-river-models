@@ -1,0 +1,34 @@
+{
+  "name": "uru/digital-river-models",
+  "description": "Models for Digital River/ MyCommerce integrations",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "keywords": [
+    "digitalriver",
+    "mycommerce"
+  ],
+  "homepage": "https://github.com/Uru-ruru/digital-river-models",
+  "authors": [
+    {
+      "name": "alexanderpetrov",
+      "email": "info@uru-ru.ru"
+    }
+  ],
+  "require": {
+    "php": "^7.4",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Uru\\DR\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Uru\\Tests\\DR\\": "tests/"
+    }
+  }
+}
