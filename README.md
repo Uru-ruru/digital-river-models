@@ -1,8 +1,8 @@
-#Models for Digital River/ MyCommerce integrations#
+#Models for Digital River/ MyCommerce integrations
 Описание API - https://api.shareit.com/HelpShareit/index.html
-##Установка
+#Установка
 `composer require uru/digital-river-models`
-##Использование
+#Использование
 Модель для добавления или обновление продукта:
 
         $data = new Product();
