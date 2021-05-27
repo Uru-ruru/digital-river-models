@@ -1,10 +1,10 @@
-#Models for Digital River/ MyCommerce integrations
+# Models for Digital River/ MyCommerce integrations
 Описание API - https://api.shareit.com/HelpShareit/index.html
-#Установка
-`composer require uru/digital-river-models`
-#Использование
+## Установка
+```composer require uru/digital-river-models```
+## Использование
 Модель для добавления или обновление продукта:
-
+```php
         $data = new Product();
         $data->setVendorId($vendorId);
         $data->setProductCode($productCode);
@@ -47,9 +47,9 @@
         
         // output to curl
         echo json_encode($data);
-
+```
 Модель корзины
-
+```php
         $data = new Cart();
         $items = [];
 
@@ -78,11 +78,11 @@
         $address->setPostalCode($user->getBillingAddressCode());
         $address->setCity($user->getBillingAddressCity());
         $address->setEmail($user->getEmail());
-        $address->setCountry($user->country->getCode());
+        $address->setCountry($user->countryCode());
 
         $data->setBillingAddress($address);
 
-        $address->setCountry($user->country->getCode());
+        $address->setCountry($user->countryCode());
         $address->setAddress($user->getDeliveryAddressFull());
         $address->setPostalCode($user->getDeliveryAddressCode());
         $address->setCity($user->getDeliveryAddressCity());
@@ -100,3 +100,4 @@
 
         // output to curl
         echo json_encode($data);
+```
