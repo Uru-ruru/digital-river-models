@@ -1,3 +1,8 @@
+[![Latest Stable Version](https://poser.pugx.org/uru/digital-river-models/v)](//packagist.org/packages/uru/digital-river-models)
+[![Total Downloads](https://poser.pugx.org/uru/digital-river-models/downloads)](//packagist.org/packages/uru/digital-river-models)
+[![Latest Unstable Version](https://poser.pugx.org/uru/digital-river-models/v/unstable)](//packagist.org/packages/uru/digital-river-models)
+[![License](https://poser.pugx.org/uru/digital-river-models/license)](//packagist.org/packages/uru/digital-river-models)
+
 # Models for Digital River/ MyCommerce integrations
 Описание API - https://api.shareit.com/HelpShareit/index.html
 ## Установка
