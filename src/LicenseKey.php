@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Uru\DR;
-
 
 /**
  * Class LicenseKey
@@ -100,5 +98,4 @@ class LicenseKey extends BaseDRModel
 
         return $this->filterUnsetFields($data);
     }
-
 }

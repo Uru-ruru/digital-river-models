@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Uru\DR;
-
 
 /**
  * Class Price
@@ -48,5 +46,4 @@ class Price extends BaseDRModel
 
         return $this->filterUnsetFields($data);
     }
-
 }

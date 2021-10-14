@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Uru\DR;
-
 
 /**
  * Class ProductStatusEnum
@@ -16,19 +14,19 @@ class ProductStatusEnum extends BaseDREnum
      * HD2 Restricted Product. Active; only select users can buy (for example, educational version). Viewed and distributed only through your select affiliates
      * DEA Temporarily Deactivated Product
      */
-    const NSE = 'NSE';
+    public const NSE = 'NSE';
     /**
      *
      */
-    const HD1 = 'HD1';
+    public const HD1 = 'HD1';
     /**
      *
      */
-    const HD2 = 'HD2';
+    public const HD2 = 'HD2';
     /**
      *
      */
-    const DEA = 'DEA';
+    public const DEA = 'DEA';
 
     /**
      * @inheritDoc

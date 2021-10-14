@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Uru\DR;
-
 
 /**
  * Class ECCNIdEnum
@@ -15,15 +13,15 @@ class ECCNIdEnum extends BaseDREnum
      * 5D992    "Information Security" "Software" not controlled by 5D002
      * 5D002    Encrypted "Software". Note: Items classified under this ECCN must also be eligible for license exception "ENC" or cannot be resold by DR MyCommerce, Inc.
      */
-    const EAR99 = 'EAR99';
+    public const EAR99 = 'EAR99';
     /**
      *
      */
-    const D992 = '5D992';
+    public const D992 = '5D992';
     /**
      *
      */
-    const D002 = '5D002';
+    public const D002 = '5D002';
 
     /**
      * @inheritDoc

@@ -6,12 +6,12 @@ use JsonSerializable;
 
 class BaseDRModel implements JsonSerializable
 {
-    const FIELD_NOT_SET = 'field_not_set';
+    public const FIELD_NOT_SET = 'field_not_set';
 
     /**
      * @return array
      */
-    function jsonSerialize(): array
+    public function jsonSerialize(): array
     {
         return [];
     }
@@ -32,5 +32,4 @@ class BaseDRModel implements JsonSerializable
 
         return $data;
     }
-
 }

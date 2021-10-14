@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Uru\DR;
-
 
 /**
  * Class ProductTypeEnum
@@ -16,19 +14,19 @@ class ProductTypeEnum extends BaseDREnum
      * PFM Product Family
      * AOP Add-On Product for subscription product
      */
-    const NMP = 'NMP';
+    public const NMP = 'NMP';
     /**
      *
      */
-    const PBD = 'PBD';
+    public const PBD = 'PBD';
     /**
      *
      */
-    const PFM = 'PFM';
+    public const PFM = 'PFM';
     /**
      *
      */
-    const AOP = 'AOP';
+    public const AOP = 'AOP';
 
 
     /**
@@ -51,5 +49,4 @@ class ProductTypeEnum extends BaseDREnum
     {
         return $this->value;
     }
-
 }

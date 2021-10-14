@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Uru\DR;
-
 
 /**
  * Class Subscription
@@ -11,39 +9,51 @@ namespace Uru\DR;
 class Subscription extends BaseDRModel
 {
     /**
-     * @var string
+     * @var IntervalIdEnum
      */
-    private string $interval_id = self::FIELD_NOT_SET;
+    private $interval_id = self::FIELD_NOT_SET;
     /**
      * @var bool
      */
-    private bool $manual_renewal;
+    private bool $allow_manual_renewal;
+
+    /**
+     * @var PriceScale[]
+     */
+    private $renewal_price_scale_definition = self::FIELD_NOT_SET;
 
     /**
      * Subscription constructor.
      */
     public function __construct()
     {
-        $this->manual_renewal = true;
+        $this->allow_manual_renewal = true;
+    }
+
+    /**
+     * @param bool $allow_manual_renewal
+     */
+    public function setAllowManualRenewal(bool $allow_manual_renewal): void
+    {
+        $this->allow_manual_renewal = $allow_manual_renewal;
+    }
+
+    /**
+     * @param PriceScale[] $renewal_price_scale_definition
+     */
+    public function setRenewalPriceScale(array $renewal_price_scale_definition): void
+    {
+        $this->renewal_price_scale_definition = $renewal_price_scale_definition;
     }
 
 
     /**
-     * @param $interval_id
+     * @param IntervalIdEnum $interval_id
      */
-    public function setIntervalId($interval_id)
+    public function setIntervalId(IntervalIdEnum $interval_id): void
     {
         $this->interval_id = $interval_id;
     }
-
-    /**
-     * @param bool $manual_renewal
-     */
-    public function setManualRenewal(bool $manual_renewal)
-    {
-        $this->manual_renewal = $manual_renewal;
-    }
-
 
     /**
      * @return array
@@ -52,10 +62,10 @@ class Subscription extends BaseDRModel
     {
         $data = [
             'interval_id' => $this->interval_id,
-            'manual_renewal' => $this->manual_renewal,
+            'renewal_price_scale_definition' => $this->renewal_price_scale_definition,
+            'allow_manual_renewal' => $this->allow_manual_renewal
         ];
 
         return $this->filterUnsetFields($data);
     }
-
 }

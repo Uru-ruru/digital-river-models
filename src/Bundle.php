@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Uru\DR;
-
 
 /**
  * Class Bundle
@@ -63,5 +61,4 @@ class Bundle extends BaseDRModel
 
         return $this->filterUnsetFields($data);
     }
-
 }

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Uru\DR;
-
 
 /**
  * Class ProductDelivery
@@ -61,5 +59,4 @@ class ProductDelivery extends BaseDRModel
 
         return $this->filterUnsetFields($data);
     }
-
 }
