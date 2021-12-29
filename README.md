@@ -106,3 +106,22 @@
         // output to curl
         echo json_encode($data);
 ```
+Модель для создание подписок в продукте
+```php
+        ...
+        $subscription = new Subscription();
+        $subscription->setIntervalId(new IntervalIdEnum(IntervalIdEnum::YEA));
+        
+        $priceScale = new PriceScale();
+        $priceScale->setQuantityFrom(1);
+
+        $price = new Price();
+        $price->setCurrency(self::DEFAULT_CURRENCY);
+        $price->setPrice($price);
+
+        $priceScale->setPrices([$price]);
+        $subscription->setRenewalPriceScale([$priceScale]);
+        
+        $data->setSubscription($subscription);
+        ...
+```

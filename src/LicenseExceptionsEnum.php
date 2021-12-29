@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Uru\DR;
-
 
 /**
  * Class LicenseExceptionsEnum
@@ -28,67 +26,67 @@ class LicenseExceptionsEnum extends BaseDREnum
      * TSU    Technology and Software
      * VEU    Validated End User
      */
-    const APP = 'APP';
+    public const APP = 'APP';
     /**
      *
      */
-    const APR = 'APR';
+    public const APR = 'APR';
     /**
      *
      */
-    const AVS = 'AVS';
+    public const AVS = 'AVS';
     /**
      *
      */
-    const CIV = 'CIV';
+    public const CIV = 'CIV';
     /**
      *
      */
-    const ENC = 'ENC';
+    public const ENC = 'ENC';
     /**
      *
      */
-    const GBS = 'GBS';
+    public const GBS = 'GBS';
     /**
      *
      */
-    const GFT = 'GFT';
+    public const GFT = 'GFT';
     /**
      *
      */
-    const GOV = 'GOV';
+    public const GOV = 'GOV';
     /**
      *
      */
-    const KMI = 'KMI';
+    public const KMI = 'KMI';
     /**
      *
      */
-    const LVS = 'LVS';
+    public const LVS = 'LVS';
     /**
      *
      */
-    const NLR = 'NLR';
+    public const NLR = 'NLR';
     /**
      *
      */
-    const RPL = 'RPL';
+    public const RPL = 'RPL';
     /**
      *
      */
-    const TMP = 'TMP';
+    public const TMP = 'TMP';
     /**
      *
      */
-    const TSR = 'TSR';
+    public const TSR = 'TSR';
     /**
      *
      */
-    const TSU = 'TSU';
+    public const TSU = 'TSU';
     /**
      *
      */
-    const VEU = 'VEU';
+    public const VEU = 'VEU';
 
     /**
      * @inheritDoc

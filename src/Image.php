@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Uru\DR;
-
 
 /**
  * Class Image
@@ -49,5 +47,4 @@ class Image extends BaseDRModel
 
         return $this->filterUnsetFields($data);
     }
-
 }

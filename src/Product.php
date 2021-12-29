@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Uru\DR;
-
 
 /**
  * Class Product
@@ -11,7 +9,6 @@ namespace Uru\DR;
  */
 class Product extends BaseDRModel
 {
-
     /** @var string */
     private string $id = self::FIELD_NOT_SET;
     /**
@@ -65,7 +62,7 @@ class Product extends BaseDRModel
     /**
      * @var Subscription
      */
-    private $subscription = self::FIELD_NOT_SET;
+    private $subscription_definition = self::FIELD_NOT_SET;
     /**
      * @var int
      */
@@ -219,11 +216,11 @@ class Product extends BaseDRModel
     }
 
     /**
-     * @param Subscription $subscription
+     * @param Subscription $subscription_definition
      */
-    public function setSubscription(Subscription $subscription): void
+    public function setSubscription(Subscription $subscription_definition): void
     {
-        $this->subscription = $subscription;
+        $this->subscription_definition = $subscription_definition;
     }
 
     /**
@@ -333,7 +330,7 @@ class Product extends BaseDRModel
             'default_currency' => $this->default_currency,
             'is_gross' => $this->is_gross,
             'price_scale_definition' => $this->price_scale_definition,
-            'subscription' => $this->subscription,
+            'subscription_definition' => $this->subscription_definition,
             'minimum_quantity' => $this->minimum_quantity,
             'maximum_quantity' => $this->maximum_quantity,
             'keywords' => $this->keywords,
@@ -348,5 +345,4 @@ class Product extends BaseDRModel
 
         return $this->filterUnsetFields($data);
     }
-
 }

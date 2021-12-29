@@ -132,7 +132,7 @@ class ProductTest extends TestCase
         $dr = new Product();
         $dr->setSubscription(new Subscription());
 
-        $this->assertEquals('{"is_gross":false,"subscription":{"manual_renewal":true},"allow_dynamic_prices":true}', json_encode($dr));
+        $this->assertEquals('{"is_gross":false,"subscription_definition":{"allow_manual_renewal":true},"allow_dynamic_prices":true}', json_encode($dr));
     }
 
     public function testSetProductType()

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Uru\DR;
-
 
 use InvalidArgumentException;
 use function PHPUnit\Framework\throwException;
@@ -127,5 +125,4 @@ class CartItem extends BaseDRModel
 
         return $this->filterUnsetFields($data);
     }
-
 }

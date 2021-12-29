@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Uru\DR;
-
 
 /**
  * Class Cart
@@ -114,5 +112,4 @@ class Cart extends BaseDRModel
 
         return $this->filterUnsetFields($data);
     }
-
 }
