@@ -33,6 +33,14 @@ class CartItem extends BaseDRModel
      * @var string
      */
     protected string $dyn_price = self::FIELD_NOT_SET;
+    /**
+     * @var string
+     */
+    private string $dyn_renewal_price = self::FIELD_NOT_SET;
+    /**
+     * @var string
+     */
+    private string $dyn_name = self::FIELD_NOT_SET;
 
     /**
      * @param string $product_id
@@ -67,6 +75,14 @@ class CartItem extends BaseDRModel
     }
 
     /**
+     * @param string $dyn_name
+     */
+    public function setDynName(string $dyn_name): void
+    {
+        $this->dyn_name = $dyn_name;
+    }
+
+    /**
      * @param string $dyn_price "{$basketItem->getPrice()}USD,N" | $basketItem->getPrice().self::DEFAULT_CURRENCY.",N"
      * @param string $dyn_price_pass
      */
@@ -81,6 +97,20 @@ class CartItem extends BaseDRModel
     }
 
     /**
+     * @param string $dyn_renewal_price "{$basketItem->getPrice()}USD,N" | $basketItem->getPrice().self::DEFAULT_CURRENCY.",N"
+     * @param string $dyn_price_pass
+     */
+    public function setDynRenewalPrice(string $dyn_renewal_price, string $dyn_price_pass): void
+    {
+        if ($this->product_id == self::FIELD_NOT_SET) {
+            throw new InvalidArgumentException(
+                'product_id must be set for setting dyn price'
+            );
+        }
+        $this->dyn_renewal_price = $dyn_renewal_price . ';' . md5("{$this->product_id}#{$dyn_renewal_price}#{$dyn_price_pass}");
+    }
+
+    /**
      * @return array
      */
     public function jsonSerialize(): array
@@ -90,7 +120,9 @@ class CartItem extends BaseDRModel
             'quantity' => $this->quantity,
             'vendor_id' => $this->vendor_id,
             'additionals' => $this->additionals == [] ? self::FIELD_NOT_SET : $this->additionals,
-            'dyn_price' => $this->dyn_price
+            'dyn_name' => $this->dyn_name,
+            'dyn_price' => $this->dyn_price,
+            'dyn_renewal_price' => $this->dyn_renewal_price,
         ];
 
         return $this->filterUnsetFields($data);

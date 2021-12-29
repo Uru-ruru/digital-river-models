@@ -34,6 +34,14 @@ class CartItemTest extends TestCase
         $dr->setDynPrice(1, 'test');
     }
 
+    public function testDynName()
+    {
+        $dr = new CartItem();
+        $dr->setDynName('test');
+
+        $this->assertEquals('{"dyn_name":"test"}', json_encode($dr));
+    }
+
     public function testSetDynPrice()
     {
         $dr = new CartItem();
@@ -41,6 +49,15 @@ class CartItemTest extends TestCase
         $dr->setDynPrice(1, 'test');
 
         $this->assertEquals('{"product_id":"1","dyn_price":"1;d3be79778eabc8f70e77201da5affc67"}', json_encode($dr));
+    }
+
+    public function testSetDynRenewalPrice()
+    {
+        $dr = new CartItem();
+        $dr->setProductId('1');
+        $dr->setDynRenewalPrice(1, 'test');
+
+        $this->assertEquals('{"product_id":"1","dyn_renewal_price":"1;d3be79778eabc8f70e77201da5affc67"}', json_encode($dr));
     }
 
     public function testAddAdditionals()
