@@ -20,7 +20,7 @@ class DeliveryServicesSettings extends BaseDRModel
     /**
      * @param int $download_protection_product_id
      */
-    public function setDownloadProtectionProductId(int $download_protection_product_id)
+    public function setDownloadProtectionProductId(int $download_protection_product_id): void
     {
         $this->download_protection_product_id = $download_protection_product_id;
     }
@@ -28,7 +28,7 @@ class DeliveryServicesSettings extends BaseDRModel
     /**
      * @param int $backup_media_product_id
      */
-    public function setBackupMediaProductId(int $backup_media_product_id)
+    public function setBackupMediaProductId(int $backup_media_product_id): void
     {
         $this->backup_media_product_id = $backup_media_product_id;
     }

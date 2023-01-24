@@ -45,7 +45,7 @@ class ExportRestrictions extends BaseDRModel
     {
         $data = [
             'selection_type' => $this->selection_type,
-            'countries' => $this->countries == [] ? self::FIELD_NOT_SET : $this->countries
+            'countries' => $this->countries === [] ? self::FIELD_NOT_SET : $this->countries
         ];
 
         return $this->filterUnsetFields($data);

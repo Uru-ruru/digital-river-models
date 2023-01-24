@@ -33,7 +33,7 @@ class ExportRegulations extends BaseDRModel
     /**
      * @param ECCNIdEnum $eccn_code
      */
-    public function setECCN(ECCNIdEnum $eccn_code)
+    public function setECCN(ECCNIdEnum $eccn_code): void
     {
         $this->eccn_code = $eccn_code;
     }
@@ -42,7 +42,7 @@ class ExportRegulations extends BaseDRModel
      * ISO 3166-1 alpha-2 country code of origin
      * @param $country_of_origin
      */
-    public function setCountryOfOrigin($country_of_origin)
+    public function setCountryOfOrigin($country_of_origin): void
     {
         $this->country_of_origin = $country_of_origin;
     }
@@ -50,7 +50,7 @@ class ExportRegulations extends BaseDRModel
     /**
      * @param LicenseExceptionsEnum $license_exception
      */
-    public function setLicenseException(LicenseExceptionsEnum $license_exception)
+    public function setLicenseException(LicenseExceptionsEnum $license_exception): void
     {
         $this->license_exception = $license_exception;
     }
@@ -59,7 +59,7 @@ class ExportRegulations extends BaseDRModel
      * Optional: Commodity Classification Automated Tracking System Alphanumeric designation indicating the level of control for a product (e.g. G07345).
      * @param $ccats
      */
-    public function setCCATS($ccats)
+    public function setCCATS($ccats): void
     {
         $this->ccats = $ccats;
     }
@@ -68,7 +68,7 @@ class ExportRegulations extends BaseDRModel
      * Optional: Numeric designation used for reporting products to customs and other government agencies worldwide (e.g. 060110).
      * @param $harmonize_code
      */
-    public function setHarmonizeCode($harmonize_code)
+    public function setHarmonizeCode($harmonize_code): void
     {
         $this->harmonize_code = $harmonize_code;
     }

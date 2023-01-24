@@ -3,7 +3,6 @@
 namespace Uru\DR;
 
 use InvalidArgumentException;
-use function PHPUnit\Framework\throwException;
 
 /**
  * Class CartItem
@@ -86,7 +85,7 @@ class CartItem extends BaseDRModel
      */
     public function setDynPrice(string $dyn_price, string $dyn_price_pass): void
     {
-        if ($this->product_id == self::FIELD_NOT_SET) {
+        if ($this->product_id === self::FIELD_NOT_SET) {
             throw new InvalidArgumentException(
                 'product_id must be set for setting dyn price'
             );
@@ -100,7 +99,7 @@ class CartItem extends BaseDRModel
      */
     public function setDynRenewalPrice(string $dyn_renewal_price, string $dyn_price_pass): void
     {
-        if ($this->product_id == self::FIELD_NOT_SET) {
+        if ($this->product_id === self::FIELD_NOT_SET) {
             throw new InvalidArgumentException(
                 'product_id must be set for setting dyn price'
             );
@@ -117,7 +116,7 @@ class CartItem extends BaseDRModel
             'product_id' => $this->product_id,
             'quantity' => $this->quantity,
             'vendor_id' => $this->vendor_id,
-            'additionals' => $this->additionals == [] ? self::FIELD_NOT_SET : $this->additionals,
+            'additionals' => $this->additionals === [] ? self::FIELD_NOT_SET : $this->additionals,
             'dyn_name' => $this->dyn_name,
             'dyn_price' => $this->dyn_price,
             'dyn_renewal_price' => $this->dyn_renewal_price,

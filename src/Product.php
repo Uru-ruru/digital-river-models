@@ -308,7 +308,7 @@ class Product extends BaseDRModel
      */
     public function getId(): ?string
     {
-        return $this->id == self::FIELD_NOT_SET ? null : $this->id;
+        return $this->id === self::FIELD_NOT_SET ? null : $this->id;
     }
 
     /**

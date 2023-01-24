@@ -35,7 +35,7 @@ abstract class BaseDREnum implements JsonSerializable
      * @param mixed $value
      * @throws InvalidArgumentException
      */
-    protected function validateValue($value)
+    protected function validateValue($value): void
     {
         if (!in_array($value, $this->getAllowedValues(), true)) {
             throw new InvalidArgumentException(

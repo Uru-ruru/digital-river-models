@@ -25,7 +25,7 @@ class BaseDRModel implements JsonSerializable
         foreach ($data as $key => $value) {
             if (is_array($value)) {
                 $data[$key] = self::filterUnsetFields($value);
-            } elseif (BaseDRModel::FIELD_NOT_SET === $value) {
+            } elseif (self::FIELD_NOT_SET === $value) {
                 unset($data[$key]);
             }
         }

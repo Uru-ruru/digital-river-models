@@ -22,7 +22,7 @@ class Image extends BaseDRModel
     /**
      * @param string $data
      */
-    public function setData(string $data)
+    public function setData(string $data): void
     {
         $this->data = $data;
     }
@@ -30,7 +30,7 @@ class Image extends BaseDRModel
     /**
      * @param string $file_name
      */
-    public function setFileName(string $file_name)
+    public function setFileName(string $file_name): void
     {
         $this->file_name = $file_name;
     }

@@ -22,7 +22,7 @@ class PriceScale extends BaseDRModel
     /**
      * @param int $quantity_from
      */
-    public function setQuantityFrom(int $quantity_from)
+    public function setQuantityFrom(int $quantity_from): void
     {
         $this->quantity_from = $quantity_from;
     }
@@ -30,7 +30,7 @@ class PriceScale extends BaseDRModel
     /**
      * @param Price[] $prices
      */
-    public function setPrices(array $prices)
+    public function setPrices(array $prices): void
     {
         $this->prices = $prices;
     }
