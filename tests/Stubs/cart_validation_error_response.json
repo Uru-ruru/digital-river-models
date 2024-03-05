@@ -1,0 +1,12 @@
+{
+  "code": "common.validation_errors",
+  "validation_errors": [
+    {
+      "code": "cart.dpl.prescreening.hold",
+      "parameters": {
+        "cart_id": "e7b968b0-a3b7-4514-b2df-b316e57101ea"
+      }
+    }
+  ],
+  "consumer_message": "Please provide full address information and re-try."
+}

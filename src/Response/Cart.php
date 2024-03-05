@@ -17,6 +17,9 @@ class Cart extends BaseResponse
 
     protected string $cart_url;
     protected array $warnings;
+    protected string $code;
+    protected string $consumer_message;
+    protected array $validation_errors;
     protected string $language;
     protected string $currency;
     protected string $display_currency;
@@ -229,5 +232,35 @@ class Cart extends BaseResponse
     public function setId(string $id): void
     {
         $this->id = $id;
+    }
+
+    public function getCode(): string
+    {
+        return $this->code;
+    }
+
+    public function setCode(string $code): void
+    {
+        $this->code = $code;
+    }
+
+    public function getConsumerMessage(): string
+    {
+        return $this->consumer_message;
+    }
+
+    public function setConsumerMessage(string $consumer_message): void
+    {
+        $this->consumer_message = $consumer_message;
+    }
+
+    public function getValidationErrors(): array
+    {
+        return $this->validation_errors;
+    }
+
+    public function setValidationErrors(array $validation_errors): void
+    {
+        $this->validation_errors = $validation_errors;
     }
 }
