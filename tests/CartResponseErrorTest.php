@@ -10,14 +10,14 @@ use Uru\DR\Response\Cart;
  *
  * @coversNothing
  */
-class CartResponseTest extends TestCase
+class CartResponseErrorTest extends TestCase
 {
     /**
      * @throws \JsonException
      */
     protected function setUp(): void
     {
-        $content = file_get_contents(__DIR__.'/Stubs/cart_response.json');
+        $content = file_get_contents(__DIR__.'/Stubs/cart_error_response.json');
         $this->response = json_decode($content, true, 512, JSON_THROW_ON_ERROR);
         $this->cart = new Cart($this->response);
     }
@@ -29,22 +29,22 @@ class CartResponseTest extends TestCase
 
     public function testWarningsCode(): void
     {
-        $this->assertTrue(empty($this->cart->getWarnings()));
+        $this->assertEquals($this->response['warnings'][0]['Code'], $this->cart->getWarnings()[0]->getCode());
     }
 
     public function testWarningsConsumerMessage(): void
     {
         $this->assertEquals(
-            true,
-            empty($this->cart->getConsumerMessage())
+            $this->response['warnings'][0]['consumer_message'],
+            $this->cart->getWarnings()[0]->getConsumerMessage()
         );
     }
 
-    public function testCode(): void
+    public function testWarningsBuyerVatId(): void
     {
         $this->assertEquals(
-            true,
-            empty($this->cart->getCode())
+            $this->response['warnings'][0]['parameters']['buyer_vat_id'],
+            $this->cart->getWarnings()[0]->getBuyerVatId()
         );
     }
 }

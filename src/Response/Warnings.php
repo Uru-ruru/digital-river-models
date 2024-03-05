@@ -28,9 +28,9 @@ class Warnings extends BaseResponse
         $this->consumer_message = $consumer_message;
     }
 
-    public function getBuyerVatId(): string
+    public function getBuyerVatId(): ?string
     {
-        return $this->buyer_vat_id;
+        return $this->buyer_vat_id ?? null;
     }
 
     public function setBuyerVatId(string $buyer_vat_id): void

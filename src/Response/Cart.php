@@ -179,9 +179,9 @@ class Cart extends BaseResponse
         $this->legal_disclaimer_checkbox = $legal_disclaimer_checkbox;
     }
 
-    public function getCartUrl(): string
+    public function getCartUrl(): ?string
     {
-        return $this->cart_url;
+        return $this->cart_url ?? null;
     }
 
     public function setCartUrl(string $cart_url): void
@@ -190,11 +190,11 @@ class Cart extends BaseResponse
     }
 
     /**
-     * @return array<int,Warnings>
+     * @return null|array<int,Warnings>
      */
-    public function getWarnings(): array
+    public function getWarnings(): ?array
     {
-        return $this->warnings;
+        return $this->warnings ?? null;
     }
 
     public function setWarnings(array $warnings): void
@@ -234,9 +234,9 @@ class Cart extends BaseResponse
         $this->id = $id;
     }
 
-    public function getCode(): string
+    public function getCode(): ?string
     {
-        return $this->code;
+        return $this->code ?? null;
     }
 
     public function setCode(string $code): void
@@ -244,9 +244,9 @@ class Cart extends BaseResponse
         $this->code = $code;
     }
 
-    public function getConsumerMessage(): string
+    public function getConsumerMessage(): ?string
     {
-        return $this->consumer_message;
+        return $this->consumer_message ?? null;
     }
 
     public function setConsumerMessage(string $consumer_message): void
