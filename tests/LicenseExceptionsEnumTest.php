@@ -2,13 +2,16 @@
 
 namespace Uru\Tests\DR;
 
-use InvalidArgumentException;
-use Uru\DR\LicenseExceptionsEnum;
 use PHPUnit\Framework\TestCase;
+use Uru\DR\LicenseExceptionsEnum;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class LicenseExceptionsEnumTest extends TestCase
 {
-
     public function testGetAllowedValues()
     {
         $expect = LicenseExceptionsEnum::APP;
@@ -19,7 +22,7 @@ class LicenseExceptionsEnumTest extends TestCase
 
     public function testGetAllowedValuesException()
     {
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(\InvalidArgumentException::class);
 
         new LicenseExceptionsEnum('test');
     }

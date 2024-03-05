@@ -2,13 +2,16 @@
 
 namespace Uru\Tests\DR;
 
-use InvalidArgumentException;
-use Uru\DR\ProductStatusEnum;
 use PHPUnit\Framework\TestCase;
+use Uru\DR\ProductStatusEnum;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class ProductStatusEnumTest extends TestCase
 {
-
     public function testGetAllowedValues()
     {
         $expect = ProductStatusEnum::DEA;
@@ -19,7 +22,7 @@ class ProductStatusEnumTest extends TestCase
 
     public function testGetAllowedValuesException()
     {
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(\InvalidArgumentException::class);
 
         new ProductStatusEnum('test');
     }

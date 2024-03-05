@@ -1,0 +1,103 @@
+{
+  "creation_date": "2024-02-26T00:00:00.0000000Z",
+  "id": 1234567890,
+  "order_notification": {
+    "purchase": {
+      "customer_data": {
+        "billing_contact": {
+          "address": {
+            "city": "Limassol",
+            "country": "Cyprus",
+            "country_id": "CY",
+            "postal_code": "3065",
+            "street1": "Sikouana, 3"
+          },
+          "company": "Company LLC",
+          "email": "info@company.cy",
+          "first_name": "Alexander",
+          "last_name": "Petrov",
+          "phone": "+35712345678"
+        },
+        "customer_payment_data": {
+          "currency": "USD",
+          "payment_method": "Visa"
+        },
+        "delivery_contact": {
+          "address": {
+            "city": "Limassol",
+            "country": "Cyprus",
+            "country_id": "CY",
+            "postal_code": "3065",
+            "street1": "Sikouana, 3"
+          },
+          "company": "Company LLC",
+          "email": "info@company.cy",
+          "first_name": "Alexander",
+          "last_name": "Petrov",
+          "phone": "+35712345678"
+        },
+        "language": "English",
+        "language_iso": "en",
+        "reg_name": "Company LLC",
+        "shopper_id": "12345678",
+        "subscribe_newsletter": false,
+        "user_id": "info@company.cy"
+      },
+      "is_test": false,
+      "payment_complete_date": "2024-02-26T00:00:00.0000000Z",
+      "payment_status": "complete",
+      "payment_status_id": "PCA",
+      "purchase_date": "2024-02-26T00:00:00.0000000Z",
+      "purchase_id": 1234567890,
+      "purchase_item": [
+        {
+          "accounting": {
+            "currency": "USD",
+            "product_net": 20,
+            "discount": 0,
+            "product_vat": 0,
+            "shipping": 0,
+            "shipping_vat": 0,
+            "eu_vat": 0,
+            "margin_net": -2.08,
+            "your_revenue": 17.92
+          },
+          "additional_information": [
+            {
+              "additional_id": "ADDITIONAL1",
+              "additional_value": "1234"
+            }
+          ],
+          "currency": "USD",
+          "delivery_type": "Electronically",
+          "discount": 0,
+          "extended_download_price": 0,
+          "manual_order_price": 0,
+          "notification_no": 5024,
+          "product_id": 1234567890,
+          "product_name": "Product Name",
+          "product_single_price": 20,
+          "purchase_item_key": [
+            {
+              "items": [
+                "licenses.txt",
+                "text\\/html",
+                "qweqweqwe==",
+                "https:\\/\\/account.mycommerce.com\\/\\/OrderDetails\\/DownloadBinaryKeyAnonymous?purchaseid=12345678&rno=1&key=123123&timetolife=66036180&name=licenses.txt",
+                "2024-03-26T23:00:00.0000000Z"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "running_no": 1,
+          "shipping_price": 0,
+          "shipping_vat_pct": 0,
+          "vat_pct": 0,
+          "your_product_id": "123"
+        }
+      ],
+      "purchase_origin": "online",
+      "sequential_invoice_no": "00-00-2024-00000123123"
+    }
+  }
+}

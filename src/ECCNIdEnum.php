@@ -3,8 +3,7 @@
 namespace Uru\DR;
 
 /**
- * Class ECCNIdEnum
- * @package Uru\DR
+ * Class ECCNIdEnum.
  */
 class ECCNIdEnum extends BaseDREnum
 {
@@ -14,31 +13,21 @@ class ECCNIdEnum extends BaseDREnum
      * 5D002    Encrypted "Software". Note: Items classified under this ECCN must also be eligible for license exception "ENC" or cannot be resold by DR MyCommerce, Inc.
      */
     public const EAR99 = 'EAR99';
-    /**
-     *
-     */
+
     public const D992 = '5D992';
-    /**
-     *
-     */
+
     public const D002 = '5D002';
 
-    /**
-     * @inheritDoc
-     */
     public function getAllowedValues(): array
     {
         return [
             self::EAR99,
             self::D992,
-            self::D002
+            self::D002,
         ];
     }
 
-    /**
-     * @inheritDoc
-     */
-    public function jsonSerialize()
+    public function jsonSerialize(): mixed
     {
         return $this->value;
     }

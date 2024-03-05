@@ -2,12 +2,16 @@
 
 namespace Uru\Tests\DR;
 
-use Uru\DR\DeliveryServicesSettings;
 use PHPUnit\Framework\TestCase;
+use Uru\DR\DeliveryServicesSettings;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class DeliveryServicesSettingsTest extends TestCase
 {
-
     public function testSetDownloadProtectionProductId()
     {
         $dr = new DeliveryServicesSettings();

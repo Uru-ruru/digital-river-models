@@ -2,13 +2,16 @@
 
 namespace Uru\Tests\DR;
 
-use InvalidArgumentException;
-use Uru\DR\ECCNIdEnum;
 use PHPUnit\Framework\TestCase;
+use Uru\DR\ECCNIdEnum;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class ECCNIdEnumTest extends TestCase
 {
-
     public function testGetAllowedValues()
     {
         $expect = ECCNIdEnum::D002;
@@ -19,7 +22,7 @@ class ECCNIdEnumTest extends TestCase
 
     public function testGetAllowedValuesException()
     {
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(\InvalidArgumentException::class);
 
         new ECCNIdEnum('test');
     }

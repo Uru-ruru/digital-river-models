@@ -2,13 +2,16 @@
 
 namespace Uru\Tests\DR;
 
-use Uru\DR\CartItem;
 use PHPUnit\Framework\TestCase;
-use InvalidArgumentException;
+use Uru\DR\CartItem;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class CartItemTest extends TestCase
 {
-
     public function testSetVendorId()
     {
         $dr = new CartItem();
@@ -29,7 +32,7 @@ class CartItemTest extends TestCase
     {
         $dr = new CartItem();
 
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(\InvalidArgumentException::class);
 
         $dr->setDynPrice(1, 'test');
     }
@@ -63,7 +66,7 @@ class CartItemTest extends TestCase
     public function testAddAdditionals()
     {
         $dr = new CartItem();
-        $dr->addAdditionals(["name" => "test", "value" => "test", "hidden" => true]);
+        $dr->addAdditionals(['name' => 'test', 'value' => 'test', 'hidden' => true]);
 
         $this->assertEquals('{"additionals":[{"name":"test","value":"test","hidden":true}]}', json_encode($dr));
     }

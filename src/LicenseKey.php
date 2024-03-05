@@ -3,27 +3,21 @@
 namespace Uru\DR;
 
 /**
- * Class LicenseKey
- * @package Uru\DR
+ * Class LicenseKey.
  */
 class LicenseKey extends BaseDRModel
 {
-    /**
-     * @var string
-     */
     private string $static_key = self::FIELD_NOT_SET;
-    /**
-     * @var string
-     */
+
     private string $key_list_name = self::FIELD_NOT_SET;
+
     /**
      * @var bool|string
      */
     private $key_for_each_license = self::FIELD_NOT_SET;
-    /**
-     * @var string
-     */
+
     private string $key_generator = self::FIELD_NOT_SET;
+
     /**
      * @var string
      */
@@ -31,6 +25,7 @@ class LicenseKey extends BaseDRModel
 
     /**
      * LicenseKey constructor.
+     *
      * @param ?string $key_generator
      */
     public function __construct(?string $key_generator = null)
@@ -41,51 +36,32 @@ class LicenseKey extends BaseDRModel
         }
     }
 
-    /**
-     * @param string $static_key
-     */
     public function setStaticKey(string $static_key): void
     {
         $this->static_key = $static_key;
     }
 
-    /**
-     * @param string $key_list_name
-     */
     public function setKeyListName(string $key_list_name): void
     {
         $this->key_list_name = $key_list_name;
     }
 
-    /**
-     * @param bool $key_for_each_license
-     */
     public function setKeyForEachLicense(bool $key_for_each_license): void
     {
         $this->key_for_each_license = $key_for_each_license;
     }
 
-    /**
-     * @param string $key_generator
-     */
     public function setKeyGenerator(string $key_generator): void
     {
         $this->key_generator = $key_generator;
         $this->setKeyGeneratorVersion(3);
     }
 
-    /**
-     * @param string $key_generator_version
-     */
     public function setKeyGeneratorVersion(string $key_generator_version): void
     {
         $this->key_generator_version = $key_generator_version;
     }
 
-
-    /**
-     * @return array
-     */
     public function jsonSerialize(): array
     {
         $data = [

@@ -3,8 +3,7 @@
 namespace Uru\DR;
 
 /**
- * Class ProductTypeEnum
- * @package Uru\DR
+ * Class ProductTypeEnum.
  */
 class ProductTypeEnum extends BaseDREnum
 {
@@ -12,39 +11,26 @@ class ProductTypeEnum extends BaseDREnum
      * NMP Normal Product
      * PBD Product Bundle
      * PFM Product Family
-     * AOP Add-On Product for subscription product
+     * AOP Add-On Product for subscription product.
      */
     public const NMP = 'NMP';
-    /**
-     *
-     */
+
     public const PBD = 'PBD';
-    /**
-     *
-     */
+
     public const PFM = 'PFM';
-    /**
-     *
-     */
+
     public const AOP = 'AOP';
 
-
-    /**
-     * @inheritDoc
-     */
     public function getAllowedValues(): array
     {
         return [
             self::NMP,
             self::PBD,
             self::PFM,
-            self::AOP
+            self::AOP,
         ];
     }
 
-    /**
-     * @return string
-     */
     public function jsonSerialize(): string
     {
         return $this->value;

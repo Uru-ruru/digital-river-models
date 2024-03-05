@@ -2,12 +2,16 @@
 
 namespace Uru\Tests\DR;
 
-use Uru\DR\Image;
 use PHPUnit\Framework\TestCase;
+use Uru\DR\Image;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class ImageTest extends TestCase
 {
-
     public function testSetFileName()
     {
         $dr = new Image();

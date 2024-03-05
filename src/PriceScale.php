@@ -3,8 +3,7 @@
 namespace Uru\DR;
 
 /**
- * Class PriceScale
- * @package Uru\DR
+ * Class PriceScale.
  */
 class PriceScale extends BaseDRModel
 {
@@ -18,10 +17,6 @@ class PriceScale extends BaseDRModel
      */
     private $prices = self::FIELD_NOT_SET;
 
-
-    /**
-     * @param int $quantity_from
-     */
     public function setQuantityFrom(int $quantity_from): void
     {
         $this->quantity_from = $quantity_from;
@@ -35,9 +30,6 @@ class PriceScale extends BaseDRModel
         $this->prices = $prices;
     }
 
-    /**
-     * @return array
-     */
     public function jsonSerialize(): array
     {
         $data = [

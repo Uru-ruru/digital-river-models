@@ -2,18 +2,22 @@
 
 namespace Uru\Tests\DR;
 
+use PHPUnit\Framework\TestCase;
 use Uru\DR\Address;
 use Uru\DR\Cart;
-use PHPUnit\Framework\TestCase;
 use Uru\DR\CartItem;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class CartTest extends TestCase
 {
-
     public function testSetBillingAddress()
     {
         $dr = new Cart();
-        $dr->setBillingAddress((new Address()));
+        $dr->setBillingAddress(new Address());
 
         $this->assertEquals('{"payment_account":{"billing_address":[]}}', json_encode($dr));
     }
@@ -51,7 +55,7 @@ class CartTest extends TestCase
     public function testSetShippingAddress()
     {
         $dr = new Cart();
-        $dr->setShippingAddress((new Address()));
+        $dr->setShippingAddress(new Address());
 
         $this->assertEquals('{"payment_account":[],"shipping_address":[]}', json_encode($dr));
     }

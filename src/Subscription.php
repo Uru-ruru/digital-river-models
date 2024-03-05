@@ -3,8 +3,7 @@
 namespace Uru\DR;
 
 /**
- * Class Subscription
- * @package Uru\DR
+ * Class Subscription.
  */
 class Subscription extends BaseDRModel
 {
@@ -12,9 +11,7 @@ class Subscription extends BaseDRModel
      * @var IntervalIdEnum
      */
     private $interval_id = self::FIELD_NOT_SET;
-    /**
-     * @var bool
-     */
+
     private bool $allow_manual_renewal;
 
     /**
@@ -30,9 +27,6 @@ class Subscription extends BaseDRModel
         $this->allow_manual_renewal = true;
     }
 
-    /**
-     * @param bool $allow_manual_renewal
-     */
     public function setAllowManualRenewal(bool $allow_manual_renewal): void
     {
         $this->allow_manual_renewal = $allow_manual_renewal;
@@ -46,24 +40,17 @@ class Subscription extends BaseDRModel
         $this->renewal_price_scale_definition = $renewal_price_scale_definition;
     }
 
-
-    /**
-     * @param IntervalIdEnum $interval_id
-     */
     public function setIntervalId(IntervalIdEnum $interval_id): void
     {
         $this->interval_id = $interval_id;
     }
 
-    /**
-     * @return array
-     */
     public function jsonSerialize(): array
     {
         $data = [
             'interval_id' => $this->interval_id,
             'renewal_price_scale_definition' => $this->renewal_price_scale_definition,
-            'allow_manual_renewal' => $this->allow_manual_renewal
+            'allow_manual_renewal' => $this->allow_manual_renewal,
         ];
 
         return $this->filterUnsetFields($data);

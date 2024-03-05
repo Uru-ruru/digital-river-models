@@ -2,6 +2,7 @@
 
 namespace Uru\Tests\DR;
 
+use PHPUnit\Framework\TestCase;
 use Uru\DR\Bundle;
 use Uru\DR\DeliveryServicesSettings;
 use Uru\DR\ExportRegulations;
@@ -9,16 +10,19 @@ use Uru\DR\ExportRestrictions;
 use Uru\DR\Image;
 use Uru\DR\PriceScale;
 use Uru\DR\Product;
-use PHPUnit\Framework\TestCase;
 use Uru\DR\ProductDelivery;
 use Uru\DR\ProductDescriptions;
 use Uru\DR\ProductStatusEnum;
 use Uru\DR\ProductTypeEnum;
 use Uru\DR\Subscription;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class ProductTest extends TestCase
 {
-
     public function testSetKeywords()
     {
         $dr = new Product();
@@ -55,7 +59,7 @@ class ProductTest extends TestCase
     public function testSetDeliveryServicesSettings()
     {
         $dr = new Product();
-        $dr->setDeliveryServicesSettings((new DeliveryServicesSettings()));
+        $dr->setDeliveryServicesSettings(new DeliveryServicesSettings());
 
         $this->assertEquals('{"is_gross":false,"delivery_services_settings":[],"allow_dynamic_prices":true}', json_encode($dr));
     }
@@ -105,7 +109,7 @@ class ProductTest extends TestCase
     public function testSetThumbnailImage()
     {
         $dr = new Product();
-        $dr->setThumbnailImage((new Image()));
+        $dr->setThumbnailImage(new Image());
 
         $this->assertEquals('{"thumbnail_image_definition":[],"is_gross":false,"allow_dynamic_prices":true}', json_encode($dr));
     }
@@ -124,7 +128,7 @@ class ProductTest extends TestCase
         $status = ProductStatusEnum::DEA;
         $dr->setStatus(new ProductStatusEnum($status));
 
-        $this->assertEquals('{"status":"' . $status . '","is_gross":false,"allow_dynamic_prices":true}', json_encode($dr));
+        $this->assertEquals('{"status":"'.$status.'","is_gross":false,"allow_dynamic_prices":true}', json_encode($dr));
     }
 
     public function testSetSubscription()
@@ -141,7 +145,7 @@ class ProductTest extends TestCase
         $productType = ProductTypeEnum::AOP;
         $dr->setProductType(new ProductTypeEnum($productType));
 
-        $this->assertEquals('{"product_type":"' . $productType . '","is_gross":false,"allow_dynamic_prices":true}', json_encode($dr));
+        $this->assertEquals('{"product_type":"'.$productType.'","is_gross":false,"allow_dynamic_prices":true}', json_encode($dr));
     }
 
     public function testSetExportRegulations()

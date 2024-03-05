@@ -2,13 +2,17 @@
 
 namespace Uru\Tests\DR;
 
+use PHPUnit\Framework\TestCase;
 use Uru\DR\Price;
 use Uru\DR\PriceScale;
-use PHPUnit\Framework\TestCase;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class PriceScaleTest extends TestCase
 {
-
     public function testSetPrices()
     {
         $dr = new PriceScale();

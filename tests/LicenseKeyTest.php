@@ -2,12 +2,16 @@
 
 namespace Uru\Tests\DR;
 
-use Uru\DR\LicenseKey;
 use PHPUnit\Framework\TestCase;
+use Uru\DR\LicenseKey;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class LicenseKeyTest extends TestCase
 {
-
     public function testSetStaticKey()
     {
         $dr = new LicenseKey();

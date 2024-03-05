@@ -5,16 +5,19 @@ namespace Uru\Tests\DR;
 use PHPUnit\Framework\TestCase;
 use Uru\DR\Address;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class AddressTest extends TestCase
 {
-
     public function testSetAddress()
     {
         $dr = new Address();
         $dr->setAddress('test');
 
         $this->assertEquals('{"address_1":"test"}', json_encode($dr));
-
     }
 
     public function testSetCity()

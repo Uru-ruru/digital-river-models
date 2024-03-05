@@ -1,0 +1,260 @@
+{
+  "uri": "/api/v1/carts/9208a206-b5a1-404c-9a21-12345678",
+  "modified": null,
+  "status": "created",
+  "pricing": {
+    "total": 7687.19,
+    "total_no_discount": 7687.19,
+    "total_no_shipping": 0.0,
+    "subtotal": 6405.99,
+    "tax": 1281.2,
+    "shipping": 0.0,
+    "shipping_gross": 0.0,
+    "shipping_tax": 0.0,
+    "tax_rate": 20.0,
+    "tax_types": "VAT",
+    "has_vat": true,
+    "subtotal_no_discount": 6405.99,
+    "discount_gross": 0.0,
+    "discount": 0.0,
+    "currency": "USD"
+  },
+  "shopper_ip_country": "US",
+  "shopper_ip_cookie_type": "opt_in",
+  "display": {
+    "select_languages": [
+      {
+        "value": "en_US",
+        "label": "English"
+      },
+      {
+        "value": "de_DE",
+        "label": "Deutsch"
+      },
+      {
+        "value": "fr_FR",
+        "label": "Français"
+      },
+      {
+        "value": "es_ES",
+        "label": "Español"
+      },
+      {
+        "value": "pt_BR",
+        "label": "Português"
+      },
+      {
+        "value": "it_IT",
+        "label": "Italiano"
+      },
+      {
+        "value": "nl_NL",
+        "label": "Nederlands"
+      },
+      {
+        "value": "sv_SE",
+        "label": "Svenska"
+      },
+      {
+        "value": "no_NO",
+        "label": "Norsk"
+      },
+      {
+        "value": "da_DK",
+        "label": "Dansk"
+      },
+      {
+        "value": "fi_FI",
+        "label": "suomi"
+      },
+      {
+        "value": "pl_PL",
+        "label": "Polski"
+      },
+      {
+        "value": "cs_CZ",
+        "label": "čeština"
+      },
+      {
+        "value": "hu_HU",
+        "label": "Magyar"
+      },
+      {
+        "value": "ro_RO",
+        "label": "Română"
+      },
+      {
+        "value": "ru_RU",
+        "label": "Русский"
+      },
+      {
+        "value": "tr_TR",
+        "label": "Türkçe"
+      },
+      {
+        "value": "el_EL",
+        "label": "ελληνικά"
+      },
+      {
+        "value": "zh_CN",
+        "label": "简体中文"
+      },
+      {
+        "value": "zh_TW",
+        "label": "繁體中文"
+      },
+      {
+        "value": "ja_JP",
+        "label": "日本語"
+      },
+      {
+        "value": "ko_KR",
+        "label": "한국어"
+      },
+      {
+        "value": "ms_MY",
+        "label": "Malaieză"
+      }
+    ],
+    "selling_entity": {
+      "id": "DR_GMBH-ENTITY",
+      "name": "Digital River GmbH"
+    },
+    "legal_disclaimer_checkbox": false
+  },
+  "items": [
+    {
+      "product_name": "Product Name",
+      "vendor_name": "Company LLC",
+      "pricing": {
+        "total": 7687.19,
+        "total_no_discount": 7687.19,
+        "total_no_shipping": 0.0,
+        "subtotal": 6405.99,
+        "unit_price_gross": 7687.19,
+        "tax": 1281.2,
+        "shipping": 0.0,
+        "shipping_gross": 0.0,
+        "shipping_tax": 0.0,
+        "tax_rate": 20.0,
+        "tax_types": "VAT",
+        "has_vat": true,
+        "taxable_total": 6405.99,
+        "subtotal_no_discount": 6405.99,
+        "rebilling_unit_price_gross": 1535.04,
+        "rebilling_unit_price": 1279.2,
+        "rebilling_price_gross": 1535.04,
+        "discount_gross": 0.0,
+        "discount": 0.0,
+        "currency": "USD",
+        "unit_price": 6405.99,
+        "is_gross": false
+      },
+      "display": {
+        "descriptions": {
+          "display_name": "Product Name",
+          "short_description": "Product Short",
+          "full_description": "Product Full"
+        },
+        "license_agreements": [],
+        "subscription_condition": {
+          "duration_headline": "Duration",
+          "duration_text": "unlimited",
+          "billing_period_headline": "Billing Period",
+          "billing_period_text": "Every 12 months",
+          "unit_price_per_period_headline": "Unit Price per Subsequent Subscription Period",
+          "unit_price_per_period_text": "1,535.04 USD"
+        }
+      },
+      "subscription": {
+        "unit": "month",
+        "period": 12,
+        "interval_id": "YEA",
+        "interval_appellation": "Yearly without end",
+        "manual_renewal": false,
+        "auto_renewal": true,
+        "applicable_type_subscription": "acquisitiononly"
+      },
+      "minimum_quantity": 1,
+      "product_code": "123",
+      "product_type": "NMP",
+      "is_physical": false,
+      "has_volume_discount": false,
+      "allow_trial": false,
+      "merchant_descriptor": "DRI*LLC",
+      "dyn_price_dict": {
+        "USD": 6405.99
+      },
+      "is_gross_dyn_price": false,
+      "is_gross_dyn_discounted_price": false,
+      "dyn_renewal_price_dict": {
+        "USD": 1279.2
+      },
+      "is_gross_dyn_renewal_price": false,
+      "delivery_type": "electronic",
+      "license_type": "customer_or_company",
+      "id": "9208a206-b5a1-404c-9a21-123123123",
+      "product_id": "1234567890",
+      "quantity": 1,
+      "vendor_id": "12345678",
+      "additionals": [
+        {
+          "name": "ADDITIONAL1",
+          "value": "1234",
+          "hidden": true
+        }
+      ],
+      "dyn_price": "6405.99USD,N;123123123qweqwe",
+      "dyn_renewal_price": "1279.2USD,N;12312312qwer",
+      "selected_renewal": "auto",
+      "is_giveaway": false
+    }
+  ],
+  "cart_url": "https://order.mycommerce.com/cart/view/200165381/9208a206-b5a1-404c-9a21-1234567890",
+  "warnings": [
+    {
+      "Code": "cart.buyer_vat.unknown",
+      "consumer_message": "Your VAT ID could not be validated successfully. The order total now includes VAT.",
+      "parameters": {
+        "buyer_vat_id": "CY1234567890"
+      }
+    }
+  ],
+  "language": "en",
+  "currency": "USD",
+  "display_currency": "USD",
+  "shipping_address": {
+    "first_name": "Aleksandr",
+    "last_name": "Petrov",
+    "address_1": "Sikouana 3",
+    "city": "Limassol",
+    "postal_code": "3065",
+    "country": "cy",
+    "company": "Company LLC",
+    "email": "info@company.cy"
+  },
+  "id": "8316ca90-d32d-4e68-ad70-1234567890",
+  "payment_account": {
+    "payment_type": "credit_card",
+    "cc_number": "XXXXXXXXXXXX1234",
+    "exp_month": "04",
+    "exp_year": "2024",
+    "billing_address": {
+      "first_name": "Aleksandr",
+      "last_name": "Petrov",
+      "address_1": "Sikouana 3",
+      "city": "Limassol",
+      "postal_code": "3065",
+      "country": "cy",
+      "company": "Company LLC",
+      "email": "info@company.cy"
+    }
+  },
+  "final_page_url": "https://uru-ru.ru",
+  "shopper_id": "12345678",
+  "protect": "all",
+  "license_to": "Aleksandr Petrov",
+  "cancellation_right_waived": false,
+  "force_authentication": false,
+  "razor_checkout": false
+}

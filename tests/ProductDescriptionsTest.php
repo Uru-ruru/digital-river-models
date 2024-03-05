@@ -2,12 +2,16 @@
 
 namespace Uru\Tests\DR;
 
-use Uru\DR\ProductDescriptions;
 use PHPUnit\Framework\TestCase;
+use Uru\DR\ProductDescriptions;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class ProductDescriptionsTest extends TestCase
 {
-
     public function testSetLanguage()
     {
         $dr = new ProductDescriptions();

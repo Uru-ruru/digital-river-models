@@ -2,12 +2,16 @@
 
 namespace Uru\Tests\DR;
 
-use Uru\DR\DownloadLink;
 use PHPUnit\Framework\TestCase;
+use Uru\DR\DownloadLink;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class DownloadLinkTest extends TestCase
 {
-
     public function testSetFileName()
     {
         $dr = new DownloadLink();

@@ -2,12 +2,16 @@
 
 namespace Uru\Tests\DR;
 
-use Uru\DR\ExportRestrictions;
 use PHPUnit\Framework\TestCase;
+use Uru\DR\ExportRestrictions;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class ExportRestrictionsTest extends TestCase
 {
-
     public function testAddCountry()
     {
         $dr = new ExportRestrictions();

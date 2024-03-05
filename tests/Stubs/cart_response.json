@@ -1,0 +1,221 @@
+{
+  "uri": "/api/v1/carts/8316ca90-d32d-4e68-ad70-de3fb24f05f1",
+  "modified": null,
+  "status": "created",
+  "pricing": {
+    "total": 94.5,
+    "total_no_discount": 94.5,
+    "total_no_shipping": 0.0,
+    "subtotal": 90.0,
+    "tax": 4.5,
+    "shipping": 0.0,
+    "shipping_gross": 0.0,
+    "shipping_tax": 0.0,
+    "tax_rate": 5.0,
+    "tax_types": "VAT",
+    "has_vat": true,
+    "subtotal_no_discount": 90.0,
+    "discount_gross": 0.0,
+    "discount": 0.0,
+    "currency": "USD"
+  },
+  "shopper_ip_country": "US",
+  "shopper_ip_cookie_type": "opt_in",
+  "display": {
+    "select_languages": [
+      {
+        "value": "en_US",
+        "label": "English"
+      },
+      {
+        "value": "de_DE",
+        "label": "Deutsch"
+      },
+      {
+        "value": "fr_FR",
+        "label": "Français"
+      },
+      {
+        "value": "es_ES",
+        "label": "Español"
+      },
+      {
+        "value": "pt_BR",
+        "label": "Português"
+      },
+      {
+        "value": "it_IT",
+        "label": "Italiano"
+      },
+      {
+        "value": "nl_NL",
+        "label": "Nederlands"
+      },
+      {
+        "value": "sv_SE",
+        "label": "Svenska"
+      },
+      {
+        "value": "no_NO",
+        "label": "Norsk"
+      },
+      {
+        "value": "da_DK",
+        "label": "Dansk"
+      },
+      {
+        "value": "fi_FI",
+        "label": "suomi"
+      },
+      {
+        "value": "pl_PL",
+        "label": "Polski"
+      },
+      {
+        "value": "cs_CZ",
+        "label": "čeština"
+      },
+      {
+        "value": "hu_HU",
+        "label": "Magyar"
+      },
+      {
+        "value": "ro_RO",
+        "label": "Română"
+      },
+      {
+        "value": "ru_RU",
+        "label": "Русский"
+      },
+      {
+        "value": "tr_TR",
+        "label": "Türkçe"
+      },
+      {
+        "value": "el_EL",
+        "label": "ελληνικά"
+      },
+      {
+        "value": "zh_CN",
+        "label": "简体中文"
+      },
+      {
+        "value": "zh_TW",
+        "label": "繁體中文"
+      },
+      {
+        "value": "ja_JP",
+        "label": "日本語"
+      },
+      {
+        "value": "ko_KR",
+        "label": "한국어"
+      },
+      {
+        "value": "ms_MY",
+        "label": "Malaieză"
+      }
+    ],
+    "selling_entity": {
+      "id": "DR_GMBH-ENTITY",
+      "name": "Digital River GmbH"
+    },
+    "legal_disclaimer_checkbox": false
+  },
+  "items": [
+    {
+      "product_name": "Product Name",
+      "vendor_name": "Company LLC",
+      "pricing": {
+        "total": 94.5,
+        "total_no_discount": 94.5,
+        "total_no_shipping": 0.0,
+        "subtotal": 90.0,
+        "unit_price_gross": 94.5,
+        "tax": 4.5,
+        "shipping": 0.0,
+        "shipping_gross": 0.0,
+        "shipping_tax": 0.0,
+        "tax_rate": 5.0,
+        "tax_types": "VAT",
+        "has_vat": true,
+        "taxable_total": 90.0,
+        "subtotal_no_discount": 90.0,
+        "discount_gross": 0.0,
+        "discount": 0.0,
+        "currency": "USD",
+        "unit_price": 90.0,
+        "is_gross": false
+      },
+      "display": {
+        "descriptions": {
+          "display_name": "Product Name",
+          "short_description": "Product Short Desc",
+          "full_description": "Product Full Desc"
+        },
+        "license_agreements": []
+      },
+      "minimum_quantity": 1,
+      "product_code": "876",
+      "product_type": "NMP",
+      "is_physical": false,
+      "has_volume_discount": false,
+      "allow_trial": false,
+      "merchant_descriptor": "DRI*LLC",
+      "dyn_price_dict": {
+        "USD": 90.0
+      },
+      "is_gross_dyn_price": false,
+      "is_gross_dyn_discounted_price": false,
+      "is_gross_dyn_renewal_price": false,
+      "delivery_type": "electronic",
+      "license_type": "customer_or_company",
+      "id": "8316ca90-d32d-4e68-ad70-de3fb24f05f1_11111111",
+      "product_id": "12345678",
+      "quantity": 1,
+      "vendor_id": "1234567890",
+      "additionals": [
+        {
+          "name": "ADDITIONAL1",
+          "value": "1234",
+          "hidden": true
+        }
+      ],
+      "dyn_price": "90USD, N;1234567890qwerty",
+      "is_giveaway": false
+    }
+  ],
+  "cart_url": "https://order.mycommerce.com/cart/view/12345678/8316ca90-d32d-4e68-ad70-1234567890",
+  "language": "en",
+  "currency": "USD",
+  "display_currency": "USD",
+  "shipping_address": {
+    "first_name": "Aleksandr",
+    "last_name": "Petrov",
+    "address_1": "",
+    "city": "",
+    "postal_code": "",
+    "country": "cy",
+    "company": "Company",
+    "email": "info@company.cy"
+  },
+  "id": "8316ca90-d32d-4e68-ad70-1234567890",
+  "payment_account": {
+    "billing_address": {
+      "first_name": "Aleksandr",
+      "last_name": "Petrov",
+      "address_1": "",
+      "city": "",
+      "postal_code": "",
+      "country": "cy",
+      "company": "Company",
+      "email": "info@company.cy"
+    }
+  },
+  "final_page_url": "https://uru-ru.ru/",
+  "protect": "all",
+  "license_to": "Aleksandr Petrov",
+  "cancellation_right_waived": false,
+  "force_authentication": false,
+  "razor_checkout": false
+}

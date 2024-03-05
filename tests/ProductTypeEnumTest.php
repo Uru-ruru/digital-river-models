@@ -2,13 +2,16 @@
 
 namespace Uru\Tests\DR;
 
-use InvalidArgumentException;
-use Uru\DR\ProductTypeEnum;
 use PHPUnit\Framework\TestCase;
+use Uru\DR\ProductTypeEnum;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class ProductTypeEnumTest extends TestCase
 {
-
     public function testGetAllowedValues()
     {
         $expect = ProductTypeEnum::AOP;
@@ -19,7 +22,7 @@ class ProductTypeEnumTest extends TestCase
 
     public function testGetAllowedValuesException()
     {
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(\InvalidArgumentException::class);
 
         new ProductTypeEnum('test');
     }

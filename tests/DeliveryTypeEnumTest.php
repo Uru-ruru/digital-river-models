@@ -2,13 +2,16 @@
 
 namespace Uru\Tests\DR;
 
-use Uru\DR\DeliveryTypeEnum;
 use PHPUnit\Framework\TestCase;
-use InvalidArgumentException;
+use Uru\DR\DeliveryTypeEnum;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class DeliveryTypeEnumTest extends TestCase
 {
-
     public function testGetAllowedValues()
     {
         $expect = DeliveryTypeEnum::EL5_DEM_DWL;
@@ -19,7 +22,7 @@ class DeliveryTypeEnumTest extends TestCase
 
     public function testGetAllowedValuesException()
     {
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(\InvalidArgumentException::class);
 
         new DeliveryTypeEnum('test');
     }

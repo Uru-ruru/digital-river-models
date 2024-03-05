@@ -2,23 +2,26 @@
 
 namespace Uru\Tests\DR;
 
-use Uru\DR\BaseDREnum;
+use PHPUnit\Framework\TestCase;
 use Uru\DR\DeliveryTypeEnum;
 use Uru\DR\DownloadLink;
 use Uru\DR\LicenseKey;
 use Uru\DR\ProductDelivery;
-use PHPUnit\Framework\TestCase;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class ProductDeliveryTest extends TestCase
 {
-
     public function testSetDeliveryType()
     {
         $dr = new ProductDelivery();
         $deliveryType = DeliveryTypeEnum::EL5_DEM_DWL;
         $dr->setDeliveryType(new DeliveryTypeEnum($deliveryType));
 
-        $this->assertEquals('{"delivery_type":"' . $deliveryType . '"}', json_encode($dr));
+        $this->assertEquals('{"delivery_type":"'.$deliveryType.'"}', json_encode($dr));
     }
 
     public function testSetLicenseKeyDefinition()

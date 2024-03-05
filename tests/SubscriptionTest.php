@@ -2,14 +2,18 @@
 
 namespace Uru\Tests\DR;
 
+use PHPUnit\Framework\TestCase;
 use Uru\DR\IntervalIdEnum;
 use Uru\DR\PriceScale;
 use Uru\DR\Subscription;
-use PHPUnit\Framework\TestCase;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class SubscriptionTest extends TestCase
 {
-
     public function testSetManualRenewal()
     {
         $dr = new Subscription();

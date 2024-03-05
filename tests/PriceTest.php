@@ -2,13 +2,16 @@
 
 namespace Uru\Tests\DR;
 
-use TypeError;
-use Uru\DR\Price;
 use PHPUnit\Framework\TestCase;
+use Uru\DR\Price;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class PriceTest extends TestCase
 {
-
     public function testSetCurrency()
     {
         $dr = new Price();
@@ -29,7 +32,7 @@ class PriceTest extends TestCase
     {
         $dr = new Price();
 
-        $this->expectException(TypeError::class);
+        $this->expectException(\TypeError::class);
         $dr->setPrice('test');
     }
 }

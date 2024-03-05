@@ -3,8 +3,7 @@
 namespace Uru\DR;
 
 /**
- * Class LicenseExceptionsEnum
- * @package Uru\DR
+ * Class LicenseExceptionsEnum.
  */
 class LicenseExceptionsEnum extends BaseDREnum
 {
@@ -24,73 +23,40 @@ class LicenseExceptionsEnum extends BaseDREnum
      * TMP    Temporary Imports, Exports, and Re-exports
      * TSR    Restricted Technology and Software
      * TSU    Technology and Software
-     * VEU    Validated End User
+     * VEU    Validated End User.
      */
     public const APP = 'APP';
-    /**
-     *
-     */
+
     public const APR = 'APR';
-    /**
-     *
-     */
+
     public const AVS = 'AVS';
-    /**
-     *
-     */
+
     public const CIV = 'CIV';
-    /**
-     *
-     */
+
     public const ENC = 'ENC';
-    /**
-     *
-     */
+
     public const GBS = 'GBS';
-    /**
-     *
-     */
+
     public const GFT = 'GFT';
-    /**
-     *
-     */
+
     public const GOV = 'GOV';
-    /**
-     *
-     */
+
     public const KMI = 'KMI';
-    /**
-     *
-     */
+
     public const LVS = 'LVS';
-    /**
-     *
-     */
+
     public const NLR = 'NLR';
-    /**
-     *
-     */
+
     public const RPL = 'RPL';
-    /**
-     *
-     */
+
     public const TMP = 'TMP';
-    /**
-     *
-     */
+
     public const TSR = 'TSR';
-    /**
-     *
-     */
+
     public const TSU = 'TSU';
-    /**
-     *
-     */
+
     public const VEU = 'VEU';
 
-    /**
-     * @inheritDoc
-     */
     public function getAllowedValues(): array
     {
         return [
@@ -109,14 +75,11 @@ class LicenseExceptionsEnum extends BaseDREnum
             self::TMP,
             self::TSR,
             self::TSU,
-            self::VEU
+            self::VEU,
         ];
     }
 
-    /**
-     * @inheritDoc
-     */
-    public function jsonSerialize()
+    public function jsonSerialize(): mixed
     {
         return $this->value;
     }

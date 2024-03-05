@@ -2,12 +2,16 @@
 
 namespace Uru\Tests\DR;
 
-use Uru\DR\Bundle;
 use PHPUnit\Framework\TestCase;
+use Uru\DR\Bundle;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 class BundleTest extends TestCase
 {
-
     public function testSetDisplayOrder()
     {
         $dr = new Bundle();
