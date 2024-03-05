@@ -32,6 +32,8 @@
     }
   },
   "scripts": {
-    "php-cs-fixer": "vendor/bin/php-cs-fixer fix --verbose --allow-risky=yes --using-cache=no --config .php-cs-fixer.php"
+    "php-cs-fixer": "vendor/bin/php-cs-fixer fix --verbose --allow-risky=yes --using-cache=no --config .php-cs-fixer.php",
+    "php-cs-fixer-check": "vendor/bin/php-cs-fixer check --verbose --allow-risky=yes --config .php-cs-fixer.php",
+    "test": "vendor/bin/phpunit"
   }
 }
