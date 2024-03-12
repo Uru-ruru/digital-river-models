@@ -4,37 +4,37 @@ namespace Uru\DR\Response;
 
 class PurchaseItem extends BaseResponse
 {
-    private array $additional_information;
+    private array $additional_information = [];
 
-    private string $currency;
+    private ?string $currency = null;
 
-    private string $delivery_type;
+    private ?string $delivery_type = null;
 
-    private float $discount;
+    private ?float $discount = null;
 
-    private float $extended_download_price;
+    private ?float $extended_download_price = null;
 
-    private float $manual_order_price;
+    private ?float $manual_order_price = null;
 
-    private int $notification_no;
+    private ?int $notification_no = null;
 
-    private int $product_id;
+    private ?int $product_id = null;
 
-    private string $product_name;
+    private ?string $product_name = null;
 
-    private float $product_single_price;
+    private ?float $product_single_price = null;
 
-    private int $quantity;
+    private ?int $quantity = null;
 
-    private int $running_no;
+    private ?int $running_no = null;
 
-    private float $shipping_price;
+    private ?float $shipping_price = null;
 
-    private float $shipping_vat_pct;
+    private ?float $shipping_vat_pct = null;
 
     private ?PurchaseItemSubscription $subscription = null;
 
-    private float $vat_pct;
+    private ?float $vat_pct = null;
 
     private ?string $your_product_id = null;
 
@@ -48,7 +48,7 @@ class PurchaseItem extends BaseResponse
         $this->additional_information = $additional_information;
     }
 
-    public function getCurrency(): string
+    public function getCurrency(): ?string
     {
         return $this->currency;
     }
@@ -58,7 +58,7 @@ class PurchaseItem extends BaseResponse
         $this->currency = $currency;
     }
 
-    public function getDeliveryType(): string
+    public function getDeliveryType(): ?string
     {
         return $this->delivery_type;
     }
@@ -68,7 +68,7 @@ class PurchaseItem extends BaseResponse
         $this->delivery_type = $delivery_type;
     }
 
-    public function getDiscount(): float
+    public function getDiscount(): ?float
     {
         return $this->discount;
     }
@@ -78,7 +78,7 @@ class PurchaseItem extends BaseResponse
         $this->discount = $discount;
     }
 
-    public function getExtendedDownloadPrice(): float
+    public function getExtendedDownloadPrice(): ?float
     {
         return $this->extended_download_price;
     }
@@ -88,7 +88,7 @@ class PurchaseItem extends BaseResponse
         $this->extended_download_price = $extended_download_price;
     }
 
-    public function getManualOrderPrice(): float
+    public function getManualOrderPrice(): ?float
     {
         return $this->manual_order_price;
     }
@@ -98,7 +98,7 @@ class PurchaseItem extends BaseResponse
         $this->manual_order_price = $manual_order_price;
     }
 
-    public function getNotificationNo(): int
+    public function getNotificationNo(): ?int
     {
         return $this->notification_no;
     }
@@ -108,7 +108,7 @@ class PurchaseItem extends BaseResponse
         $this->notification_no = $notification_no;
     }
 
-    public function getProductId(): int
+    public function getProductId(): ?int
     {
         return $this->product_id;
     }
@@ -118,7 +118,7 @@ class PurchaseItem extends BaseResponse
         $this->product_id = $product_id;
     }
 
-    public function getProductName(): string
+    public function getProductName(): ?string
     {
         return $this->product_name;
     }
@@ -128,7 +128,7 @@ class PurchaseItem extends BaseResponse
         $this->product_name = $product_name;
     }
 
-    public function getProductSinglePrice(): float
+    public function getProductSinglePrice(): ?float
     {
         return $this->product_single_price;
     }
@@ -138,7 +138,7 @@ class PurchaseItem extends BaseResponse
         $this->product_single_price = $product_single_price;
     }
 
-    public function getQuantity(): int
+    public function getQuantity(): ?int
     {
         return $this->quantity;
     }
@@ -148,7 +148,7 @@ class PurchaseItem extends BaseResponse
         $this->quantity = $quantity;
     }
 
-    public function getRunningNo(): int
+    public function getRunningNo(): ?int
     {
         return $this->running_no;
     }
@@ -158,7 +158,7 @@ class PurchaseItem extends BaseResponse
         $this->running_no = $running_no;
     }
 
-    public function getShippingPrice(): float
+    public function getShippingPrice(): ?float
     {
         return $this->shipping_price;
     }
@@ -168,7 +168,7 @@ class PurchaseItem extends BaseResponse
         $this->shipping_price = $shipping_price;
     }
 
-    public function getShippingVatPct(): float
+    public function getShippingVatPct(): ?float
     {
         return $this->shipping_vat_pct;
     }
@@ -193,7 +193,7 @@ class PurchaseItem extends BaseResponse
         $this->subscription = $subscription;
     }
 
-    public function getVatPct(): float
+    public function getVatPct(): ?float
     {
         return $this->vat_pct;
     }

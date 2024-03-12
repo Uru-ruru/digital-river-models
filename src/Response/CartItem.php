@@ -4,29 +4,29 @@ namespace Uru\DR\Response;
 
 class CartItem extends BaseResponse
 {
-    protected string $product_name;
-    protected string $vendor_name;
+    protected ?string $product_name = null;
+    protected ?string $vendor_name = null;
 
-    protected Pricing $pricing;
-    protected string $display_name;
-    protected string $short_description;
-    protected string $full_description;
-    protected array $display;
-    protected array $subscription;
-    protected string $product_id;
-    protected string $id;
+    protected ?Pricing $pricing = null;
+    protected ?string $display_name = null;
+    protected ?string $short_description = null;
+    protected ?string $full_description = null;
 
-    protected float|int|string $quantity;
+    protected ?Subscription $subscription = null;
+    protected ?string $product_id = null;
+    protected ?string $id = null;
 
-    protected string $vendor_id;
+    protected null|float|int|string $quantity = null;
+
+    protected ?string $vendor_id = null;
 
     protected array $additionals = [];
 
-    protected string $dyn_price;
+    protected ?string $dyn_price = null;
 
-    protected string $dyn_renewal_price;
+    protected ?string $dyn_renewal_price = null;
 
-    protected string $dyn_name;
+    protected ?string $dyn_name = null;
 
     public function setProductId(string $product_id): void
     {
@@ -66,17 +66,17 @@ class CartItem extends BaseResponse
         $this->dyn_renewal_price = $dyn_renewal_price;
     }
 
-    public function getProductId(): string
+    public function getProductId(): ?string
     {
         return $this->product_id;
     }
 
-    public function getQuantity(): float|int|string
+    public function getQuantity(): null|float|int|string
     {
         return $this->quantity;
     }
 
-    public function getVendorId(): string
+    public function getVendorId(): ?string
     {
         return $this->vendor_id;
     }
@@ -86,22 +86,22 @@ class CartItem extends BaseResponse
         return $this->additionals;
     }
 
-    public function getDynPrice(): string
+    public function getDynPrice(): ?string
     {
         return $this->dyn_price;
     }
 
-    public function getDynRenewalPrice(): string
+    public function getDynRenewalPrice(): ?string
     {
         return $this->dyn_renewal_price;
     }
 
-    public function getDynName(): string
+    public function getDynName(): ?string
     {
         return $this->dyn_name;
     }
 
-    public function getProductName(): string
+    public function getProductName(): ?string
     {
         return $this->product_name;
     }
@@ -111,7 +111,7 @@ class CartItem extends BaseResponse
         $this->product_name = $product_name;
     }
 
-    public function getVendorName(): string
+    public function getVendorName(): ?string
     {
         return $this->vendor_name;
     }
@@ -121,7 +121,7 @@ class CartItem extends BaseResponse
         $this->vendor_name = $vendor_name;
     }
 
-    public function getPricing(): Pricing
+    public function getPricing(): ?Pricing
     {
         return $this->pricing;
     }
@@ -131,7 +131,7 @@ class CartItem extends BaseResponse
         $this->pricing = new Pricing($pricing);
     }
 
-    public function getDisplayName(): string
+    public function getDisplayName(): ?string
     {
         return $this->display_name;
     }
@@ -141,7 +141,7 @@ class CartItem extends BaseResponse
         $this->display_name = $display_name;
     }
 
-    public function getShortDescription(): string
+    public function getShortDescription(): ?string
     {
         return $this->short_description;
     }
@@ -151,7 +151,7 @@ class CartItem extends BaseResponse
         $this->short_description = $short_description;
     }
 
-    public function getFullDescription(): string
+    public function getFullDescription(): ?string
     {
         return $this->full_description;
     }
@@ -161,27 +161,17 @@ class CartItem extends BaseResponse
         $this->full_description = $full_description;
     }
 
-    public function getDisplay(): array
-    {
-        return $this->display;
-    }
-
-    public function setDisplay(array $display): void
-    {
-        $this->display = $display;
-    }
-
-    public function getSubscription(): object
+    public function getSubscription(): ?Subscription
     {
         return $this->subscription;
     }
 
     public function setSubscription(array $subscription): void
     {
-        $this->subscription = $subscription;
+        $this->subscription = new Subscription($subscription);
     }
 
-    public function getId(): string
+    public function getId(): ?string
     {
         return $this->id;
     }

@@ -4,11 +4,11 @@ namespace Uru\DR\Response;
 
 class PurchaseItemSubscription extends BaseResponse
 {
-    private \DateTime $expiration_date;
+    private ?\DateTime $expiration_date = null;
 
-    private string $id;
+    private ?string $id = null;
 
-    private string $interval;
+    private ?string $interval = null;
 
     private ?int $original_notification_no = null;
 
@@ -16,21 +16,21 @@ class PurchaseItemSubscription extends BaseResponse
 
     private ?int $original_running_no = null;
 
-    private string $renewal_discount_count;
+    private ?string $renewal_discount_count = null;
 
-    private string $renewal_discount_start;
+    private ?string $renewal_discount_start = null;
 
-    private string $renewal_type;
+    private ?string $renewal_type = null;
 
-    private string $retention_discount_count;
+    private ?string $retention_discount_count = null;
 
-    private string $retention_discount_percent;
+    private ?string $retention_discount_percent = null;
 
-    private \DateTime $start_date;
+    private ?\DateTime $start_date = null;
 
-    private string $status;
+    private ?string $status = null;
 
-    private string $status_id;
+    private ?string $status_id = null;
 
     public function getExpirationDate(): \DateTime
     {
@@ -45,7 +45,7 @@ class PurchaseItemSubscription extends BaseResponse
         $this->expiration_date = new \DateTime($expiration_date);
     }
 
-    public function getId(): string
+    public function getId(): ?string
     {
         return $this->id;
     }
@@ -55,7 +55,7 @@ class PurchaseItemSubscription extends BaseResponse
         $this->id = $id;
     }
 
-    public function getInterval(): string
+    public function getInterval(): ?string
     {
         return $this->interval;
     }
@@ -95,7 +95,7 @@ class PurchaseItemSubscription extends BaseResponse
         $this->original_running_no = $original_running_no;
     }
 
-    public function getRenewalDiscountCount(): string
+    public function getRenewalDiscountCount(): ?string
     {
         return $this->renewal_discount_count;
     }
@@ -105,7 +105,7 @@ class PurchaseItemSubscription extends BaseResponse
         $this->renewal_discount_count = $renewal_discount_count;
     }
 
-    public function getRenewalDiscountStart(): string
+    public function getRenewalDiscountStart(): ?string
     {
         return $this->renewal_discount_start;
     }
@@ -115,7 +115,7 @@ class PurchaseItemSubscription extends BaseResponse
         $this->renewal_discount_start = $renewal_discount_start;
     }
 
-    public function getRenewalType(): string
+    public function getRenewalType(): ?string
     {
         return $this->renewal_type;
     }
@@ -125,7 +125,7 @@ class PurchaseItemSubscription extends BaseResponse
         $this->renewal_type = $renewal_type;
     }
 
-    public function getRetentionDiscountCount(): string
+    public function getRetentionDiscountCount(): ?string
     {
         return $this->retention_discount_count;
     }
@@ -135,7 +135,7 @@ class PurchaseItemSubscription extends BaseResponse
         $this->retention_discount_count = $retention_discount_count;
     }
 
-    public function getRetentionDiscountPercent(): string
+    public function getRetentionDiscountPercent(): ?string
     {
         return $this->retention_discount_percent;
     }
@@ -145,7 +145,7 @@ class PurchaseItemSubscription extends BaseResponse
         $this->retention_discount_percent = $retention_discount_percent;
     }
 
-    public function getStartDate(): \DateTime
+    public function getStartDate(): ?\DateTime
     {
         return $this->start_date;
     }
@@ -158,7 +158,7 @@ class PurchaseItemSubscription extends BaseResponse
         $this->start_date = new \DateTime($start_date);
     }
 
-    public function getStatus(): string
+    public function getStatus(): ?string
     {
         return $this->status;
     }
@@ -168,7 +168,7 @@ class PurchaseItemSubscription extends BaseResponse
         $this->status = $status;
     }
 
-    public function getStatusId(): string
+    public function getStatusId(): ?string
     {
         return $this->status_id;
     }

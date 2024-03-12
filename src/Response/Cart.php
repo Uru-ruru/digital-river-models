@@ -6,33 +6,33 @@ use Uru\DR\Address;
 
 class Cart extends BaseResponse
 {
-    protected string $status;
-    protected Pricing $pricing;
-    protected string $shopper_ip_country;
-    protected string $shopper_ip_cookie_type;
-    protected array $select_languages;
-    protected array $selling_entity;
-    protected bool $legal_disclaimer_checkbox;
-    protected array $items;
+    protected ?string $status = null;
+    protected ?Pricing $pricing = null;
+    protected ?string $shopper_ip_country = null;
+    protected ?string $shopper_ip_cookie_type = null;
+    protected array $select_languages = [];
+    protected array $selling_entity = [];
+    protected bool $legal_disclaimer_checkbox = false;
+    protected array $items = [];
 
-    protected string $cart_url;
-    protected array $warnings;
-    protected string $code;
-    protected string $consumer_message;
-    protected array $validation_errors;
-    protected string $language;
-    protected string $currency;
-    protected string $display_currency;
+    protected ?string $cart_url = null;
+    protected array $warnings = [];
+    protected ?string $code = null;
+    protected ?string $consumer_message = null;
+    protected array $validation_errors = [];
+    protected ?string $language = null;
+    protected ?string $currency = null;
+    protected ?string $display_currency = null;
 
-    protected Address $billing_address;
+    protected ?Address $billing_address = null;
 
-    protected Address $shipping_address;
+    protected ?Address $shipping_address = null;
 
-    protected string $id;
-    protected string $final_page_url;
-    protected string $shopper_id;
+    protected ?string $id = null;
+    protected ?string $final_page_url = null;
+    protected ?string $shopper_id = null;
 
-    protected string $protect;
+    protected ?string $protect = null;
 
     public function setItems(array $items): void
     {
@@ -74,42 +74,42 @@ class Cart extends BaseResponse
     /**
      * @return array<int,CartItem>
      */
-    public function getItems(): array
+    public function getItems(): ?array
     {
         return $this->items;
     }
 
-    public function getBillingAddress(): Address
+    public function getBillingAddress(): ?Address
     {
         return $this->billing_address;
     }
 
-    public function getShippingAddress(): Address
+    public function getShippingAddress(): ?Address
     {
         return $this->shipping_address;
     }
 
-    public function getShopperId(): string
+    public function getShopperId(): ?string
     {
         return $this->shopper_id;
     }
 
-    public function getDisplayCurrency(): string
+    public function getDisplayCurrency(): ?string
     {
         return $this->display_currency;
     }
 
-    public function getProtect(): string
+    public function getProtect(): ?string
     {
         return $this->protect;
     }
 
-    public function getFinalPageUrl(): string
+    public function getFinalPageUrl(): ?string
     {
         return $this->final_page_url;
     }
 
-    public function getStatus(): string
+    public function getStatus(): ?string
     {
         return $this->status;
     }
@@ -119,7 +119,7 @@ class Cart extends BaseResponse
         $this->status = $status;
     }
 
-    public function getPricing(): Pricing
+    public function getPricing(): ?Pricing
     {
         return $this->pricing;
     }
@@ -129,7 +129,7 @@ class Cart extends BaseResponse
         $this->pricing = new Pricing($pricing);
     }
 
-    public function getShopperIpCountry(): string
+    public function getShopperIpCountry(): ?string
     {
         return $this->shopper_ip_country;
     }
@@ -139,7 +139,7 @@ class Cart extends BaseResponse
         $this->shopper_ip_country = $shopper_ip_country;
     }
 
-    public function getShopperIpCookieType(): string
+    public function getShopperIpCookieType(): ?string
     {
         return $this->shopper_ip_cookie_type;
     }
@@ -181,7 +181,7 @@ class Cart extends BaseResponse
 
     public function getCartUrl(): ?string
     {
-        return $this->cart_url ?? null;
+        return $this->cart_url;
     }
 
     public function setCartUrl(string $cart_url): void
@@ -192,9 +192,9 @@ class Cart extends BaseResponse
     /**
      * @return null|array<int,Warnings>
      */
-    public function getWarnings(): ?array
+    public function getWarnings(): array
     {
-        return $this->warnings ?? null;
+        return $this->warnings;
     }
 
     public function setWarnings(array $warnings): void
@@ -204,7 +204,7 @@ class Cart extends BaseResponse
         }
     }
 
-    public function getLanguage(): string
+    public function getLanguage(): ?string
     {
         return $this->language;
     }
@@ -214,7 +214,7 @@ class Cart extends BaseResponse
         $this->language = $language;
     }
 
-    public function getCurrency(): string
+    public function getCurrency(): ?string
     {
         return $this->currency;
     }
@@ -224,7 +224,7 @@ class Cart extends BaseResponse
         $this->currency = $currency;
     }
 
-    public function getId(): string
+    public function getId(): ?string
     {
         return $this->id;
     }
@@ -236,7 +236,7 @@ class Cart extends BaseResponse
 
     public function getCode(): ?string
     {
-        return $this->code ?? null;
+        return $this->code;
     }
 
     public function setCode(string $code): void

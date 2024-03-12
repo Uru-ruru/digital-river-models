@@ -4,21 +4,21 @@ namespace Uru\DR\Response;
 
 class Warnings extends BaseResponse
 {
-    protected string $Code;
-    protected string $consumer_message;
-    protected string $buyer_vat_id;
+    protected ?string $code = null;
+    protected ?string $consumer_message = null;
+    protected ?string $buyer_vat_id = null;
 
-    public function getCode(): string
+    public function getCode(): ?string
     {
-        return $this->Code;
+        return $this->code;
     }
 
-    public function setCode(string $Code): void
+    public function setCode(string $code): void
     {
-        $this->Code = $Code;
+        $this->code = $code;
     }
 
-    public function getConsumerMessage(): string
+    public function getConsumerMessage(): ?string
     {
         return $this->consumer_message;
     }
@@ -30,7 +30,7 @@ class Warnings extends BaseResponse
 
     public function getBuyerVatId(): ?string
     {
-        return $this->buyer_vat_id ?? null;
+        return $this->buyer_vat_id;
     }
 
     public function setBuyerVatId(string $buyer_vat_id): void

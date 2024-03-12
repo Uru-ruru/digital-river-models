@@ -4,14 +4,14 @@ namespace Uru\DR\Response;
 
 class Contract extends BaseResponse
 {
-    private Address $address;
-    private string $company;
-    private string $email;
-    private string $first_name;
-    private string $last_name;
-    private string $phone;
+    private ?Address $address = null;
+    private ?string $company = null;
+    private ?string $email = null;
+    private ?string $first_name = null;
+    private ?string $last_name = null;
+    private ?string $phone = null;
 
-    public function getAddress(): Address
+    public function getAddress(): ?Address
     {
         return $this->address;
     }
@@ -21,7 +21,7 @@ class Contract extends BaseResponse
         $this->address = new Address($address);
     }
 
-    public function getCompany(): string
+    public function getCompany(): ?string
     {
         return $this->company;
     }
@@ -31,7 +31,7 @@ class Contract extends BaseResponse
         $this->company = $company;
     }
 
-    public function getEmail(): string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
@@ -41,7 +41,7 @@ class Contract extends BaseResponse
         $this->email = $email;
     }
 
-    public function getFirstName(): string
+    public function getFirstName(): ?string
     {
         return $this->first_name;
     }
@@ -51,7 +51,7 @@ class Contract extends BaseResponse
         $this->first_name = $first_name;
     }
 
-    public function getLastName(): string
+    public function getLastName(): ?string
     {
         return $this->last_name;
     }
@@ -61,7 +61,7 @@ class Contract extends BaseResponse
         $this->last_name = $last_name;
     }
 
-    public function getPhone(): string
+    public function getPhone(): ?string
     {
         return $this->phone;
     }

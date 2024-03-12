@@ -7,13 +7,13 @@ namespace Uru\DR\Response;
  */
 class Address extends BaseResponse
 {
-    protected string $city;
-    protected string $country;
-    protected string $country_id;
-    protected string $postal_code;
-    protected string $street1;
+    protected ?string $city = null;
+    protected ?string $country = null;
+    protected ?string $country_id = null;
+    protected ?string $postal_code = null;
+    protected ?string $street1 = null;
 
-    public function getCity(): string
+    public function getCity(): ?string
     {
         return $this->city;
     }
@@ -23,7 +23,7 @@ class Address extends BaseResponse
         $this->city = $city;
     }
 
-    public function getCountry(): string
+    public function getCountry(): ?string
     {
         return $this->country;
     }
@@ -33,7 +33,7 @@ class Address extends BaseResponse
         $this->country = $country;
     }
 
-    public function getCountryId(): string
+    public function getCountryId(): ?string
     {
         return $this->country_id;
     }
@@ -43,7 +43,7 @@ class Address extends BaseResponse
         $this->country_id = $country_id;
     }
 
-    public function getPostalCode(): string
+    public function getPostalCode(): ?string
     {
         return $this->postal_code;
     }
@@ -53,7 +53,7 @@ class Address extends BaseResponse
         $this->postal_code = $postal_code;
     }
 
-    public function getStreet1(): string
+    public function getStreet1(): ?string
     {
         return $this->street1;
     }

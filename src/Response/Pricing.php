@@ -4,23 +4,23 @@ namespace Uru\DR\Response;
 
 class Pricing extends BaseResponse
 {
-    protected float $total;
-    protected float $total_no_discount;
-    protected float $total_no_shipping;
-    protected float $subtotal;
-    protected float $tax;
-    protected float $shipping;
-    protected float $shipping_gross;
-    protected float $shipping_tax;
-    protected float $tax_rate;
-    protected string $tax_types;
-    protected bool $has_vat;
-    protected float $subtotal_no_discount;
-    protected float $discount_gross;
-    protected float $discount;
-    protected string $currency;
+    protected ?float $total = null;
+    protected ?float $total_no_discount = null;
+    protected ?float $total_no_shipping = null;
+    protected ?float $subtotal = null;
+    protected ?float $tax = null;
+    protected ?float $shipping = null;
+    protected ?float $shipping_gross = null;
+    protected ?float $shipping_tax = null;
+    protected ?float $tax_rate = null;
+    protected ?string $tax_types = null;
+    protected bool $has_vat = false;
+    protected ?float $subtotal_no_discount = null;
+    protected ?float $discount_gross = null;
+    protected ?float $discount = null;
+    protected ?string $currency = null;
 
-    public function getTotal(): float
+    public function getTotal(): ?float
     {
         return $this->total;
     }
@@ -30,7 +30,7 @@ class Pricing extends BaseResponse
         $this->total = $total;
     }
 
-    public function getTotalNoDiscount(): float
+    public function getTotalNoDiscount(): ?float
     {
         return $this->total_no_discount;
     }
@@ -40,7 +40,7 @@ class Pricing extends BaseResponse
         $this->total_no_discount = $total_no_discount;
     }
 
-    public function getTotalNoShipping(): float
+    public function getTotalNoShipping(): ?float
     {
         return $this->total_no_shipping;
     }
@@ -50,7 +50,7 @@ class Pricing extends BaseResponse
         $this->total_no_shipping = $total_no_shipping;
     }
 
-    public function getSubtotal(): float
+    public function getSubtotal(): ?float
     {
         return $this->subtotal;
     }
@@ -60,7 +60,7 @@ class Pricing extends BaseResponse
         $this->subtotal = $subtotal;
     }
 
-    public function getTax(): float
+    public function getTax(): ?float
     {
         return $this->tax;
     }
@@ -70,7 +70,7 @@ class Pricing extends BaseResponse
         $this->tax = $tax;
     }
 
-    public function getShipping(): float
+    public function getShipping(): ?float
     {
         return $this->shipping;
     }
@@ -80,7 +80,7 @@ class Pricing extends BaseResponse
         $this->shipping = $shipping;
     }
 
-    public function getShippingGross(): float
+    public function getShippingGross(): ?float
     {
         return $this->shipping_gross;
     }
@@ -90,7 +90,7 @@ class Pricing extends BaseResponse
         $this->shipping_gross = $shipping_gross;
     }
 
-    public function getShippingTax(): float
+    public function getShippingTax(): ?float
     {
         return $this->shipping_tax;
     }
@@ -100,7 +100,7 @@ class Pricing extends BaseResponse
         $this->shipping_tax = $shipping_tax;
     }
 
-    public function getTaxRate(): float
+    public function getTaxRate(): ?float
     {
         return $this->tax_rate;
     }
@@ -110,7 +110,7 @@ class Pricing extends BaseResponse
         $this->tax_rate = $tax_rate;
     }
 
-    public function getTaxTypes(): string
+    public function getTaxTypes(): ?string
     {
         return $this->tax_types;
     }
@@ -130,7 +130,7 @@ class Pricing extends BaseResponse
         $this->has_vat = $has_vat;
     }
 
-    public function getSubtotalNoDiscount(): float
+    public function getSubtotalNoDiscount(): ?float
     {
         return $this->subtotal_no_discount;
     }
@@ -140,7 +140,7 @@ class Pricing extends BaseResponse
         $this->subtotal_no_discount = $subtotal_no_discount;
     }
 
-    public function getDiscountGross(): float
+    public function getDiscountGross(): ?float
     {
         return $this->discount_gross;
     }
@@ -150,7 +150,7 @@ class Pricing extends BaseResponse
         $this->discount_gross = $discount_gross;
     }
 
-    public function getDiscount(): float
+    public function getDiscount(): ?float
     {
         return $this->discount;
     }
@@ -160,7 +160,7 @@ class Pricing extends BaseResponse
         $this->discount = $discount;
     }
 
-    public function getCurrency(): string
+    public function getCurrency(): ?string
     {
         return $this->currency;
     }

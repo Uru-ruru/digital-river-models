@@ -4,33 +4,33 @@ namespace Uru\DR\Response;
 
 class Purchase extends BaseResponse
 {
-    private \DateTime $creation_date;
+    private ?\DateTime $creation_date = null;
 
-    private Contract $billing_contact;
+    private ?Contract $billing_contact = null;
 
-    private Contract $delivery_contact;
+    private ?Contract $delivery_contact = null;
 
-    private int $shopper_id;
+    private ?int $shopper_id = null;
 
     private bool $is_test = false;
 
-    private \DateTime $payment_complete_date;
+    private ?\DateTime $payment_complete_date = null;
 
-    private string $payment_status;
+    private ?string $payment_status = null;
 
-    private string $payment_status_id;
+    private ?string $payment_status_id = null;
 
-    private \DateTime $purchase_date;
+    private ?\DateTime $purchase_date = null;
 
-    private string $purchase_id;
+    private ?string $purchase_id = null;
 
     private array $purchase_item = [];
 
-    private string $purchase_origin;
+    private ?string $purchase_origin = null;
 
-    private string $rebilling_cancel_reason;
+    private ?string $rebilling_cancel_reason = null;
 
-    public function getCreationDate(): \DateTime
+    public function getCreationDate(): ?\DateTime
     {
         return $this->creation_date;
     }
@@ -43,7 +43,7 @@ class Purchase extends BaseResponse
         $this->creation_date = new \DateTime($creation_date);
     }
 
-    public function getBillingContact(): Contract
+    public function getBillingContact(): ?Contract
     {
         return $this->billing_contact;
     }
@@ -53,7 +53,7 @@ class Purchase extends BaseResponse
         $this->billing_contact = new Contract($billing_contact);
     }
 
-    public function getDeliveryContact(): Contract
+    public function getDeliveryContact(): ?Contract
     {
         return $this->delivery_contact;
     }
@@ -63,7 +63,7 @@ class Purchase extends BaseResponse
         $this->delivery_contact = new Contract($delivery_contact);
     }
 
-    public function getShopperId(): int
+    public function getShopperId(): ?int
     {
         return $this->shopper_id;
     }
@@ -88,7 +88,7 @@ class Purchase extends BaseResponse
         $this->is_test = $is_test;
     }
 
-    public function getPaymentCompleteDate(): \DateTime
+    public function getPaymentCompleteDate(): ?\DateTime
     {
         return $this->payment_complete_date;
     }
@@ -101,7 +101,7 @@ class Purchase extends BaseResponse
         $this->payment_complete_date = new \DateTime($payment_complete_date);
     }
 
-    public function getPaymentStatus(): string
+    public function getPaymentStatus(): ?string
     {
         return $this->payment_status;
     }
@@ -111,7 +111,7 @@ class Purchase extends BaseResponse
         $this->payment_status = $payment_status;
     }
 
-    public function getPaymentStatusId(): string
+    public function getPaymentStatusId(): ?string
     {
         return $this->payment_status_id;
     }
@@ -121,7 +121,7 @@ class Purchase extends BaseResponse
         $this->payment_status_id = $payment_status_id;
     }
 
-    public function getPurchaseDate(): \DateTime
+    public function getPurchaseDate(): ?\DateTime
     {
         return $this->purchase_date;
     }
@@ -134,7 +134,7 @@ class Purchase extends BaseResponse
         $this->purchase_date = new \DateTime($purchase_date);
     }
 
-    public function getPurchaseId(): string
+    public function getPurchaseId(): ?string
     {
         return $this->purchase_id;
     }
@@ -159,7 +159,7 @@ class Purchase extends BaseResponse
         }
     }
 
-    public function getPurchaseOrigin(): string
+    public function getPurchaseOrigin(): ?string
     {
         return $this->purchase_origin;
     }
@@ -169,7 +169,7 @@ class Purchase extends BaseResponse
         $this->purchase_origin = $purchase_origin;
     }
 
-    public function getRebillingCancelReason(): string
+    public function getRebillingCancelReason(): ?string
     {
         return $this->rebilling_cancel_reason;
     }

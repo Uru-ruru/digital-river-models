@@ -22,7 +22,7 @@ class BaseResponse
     private function proceedArray(array $data): void
     {
         foreach ($data as $name => $val) {
-            if (property_exists($this, $name)) {
+            if (property_exists($this, strtolower($name))) {
                 $methodName = 'set'.$this->toCamelCase($name);
                 if (method_exists($this, $methodName)) {
                     $this->{$methodName}($val);
